@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block body %}
+        <h1>Sign up for my Newsletter!</h1>
+        <!--this form tag specifies that this form "posts" inputed
+        information to "/request" route, which in the flask code we can
+        listen for requests to this route and perform operations-->
+        <form action="/register" method="post">
+            <input name="First Name" placeholder="i.e. Shiva" type=text>
+            <input name="Last Name" placeholder="i.e. Lakshmanan" type=text>
+            <input name="email" placeholder="i.e. testing@gmail.com" type=email>
+            <select name = "Tier">
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+            <input type="submit" value="Register">
+        </form>
+{% endblock %}
